@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Pavel</title>
-<!-- build:bower -->
+    <title>Pavel Zajíc</title>
+    <!-- build:bower -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-<!-- endbuild -->
+    <!-- endbuild -->
 </head>
+
 <body>
-    
-    
-    
-    
-    
+    <div class="container-fluid">
+        <ui-view></ui-view>
+    </div>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/modules/main/main.module.js"></script>
+    <script src="js/modules/main/main.controller.js"></script>
+    <script>
+        (function() {
+            var initInjector = angular.injector(['ng']);
+            var $http = initInjector.get('$http');
+            $http.get('/config.json').then(
+                function(response) {
+                    angular.module('config', []).constant('CONFIG', response.data);
+
+                    angular.element(document).ready(function() {
+                        angular.bootstrap(document, ['poemApp']);
+                    });
+                }
+            );
+        })();
+
+    </script>
 </body>
+
 </html>

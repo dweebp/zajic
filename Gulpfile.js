@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     htmlreplace = require('gulp-html-replace'),
     rename = require('gulp-rename'),
     gulpFilter = require('gulp-filter'),
-    templateCache = require('gulp-angular-templatecache');
+    templateCache = require('gulp-angular-templatecache'),
+    webserver = require('gulp-webserver');
+
 
 
 //paths
@@ -103,19 +105,16 @@ gulp.task('bower', function () {
 
 });
 
-/*
-gulp.task('appJSReplaceAndCopy', function () {
-    gulp.src(base_path + 'app.js')
-        .pipe(replace(/foo(.{3})/g, '$1foo'))
-        .pipe(replace(/var scripts = [^]*\s\]\;/, "var scripts = ['js/utilities.js','js/components.js'];"))
-    
-        .pipe(gulp.dest(dist_path));
-});
-gulp.task('components', function () {
-    return gulp.start('components:js', 'components:files')
+gulp.task('serve', function () {
+    gulp.src('./')
+        .pipe(webserver({
+            path: '/',
+            livereload: true,
+            directoryListing: false,
+            open: true
+        }));
 });
 
-*/
 
 
 gulp.task('dist:js', function () {
