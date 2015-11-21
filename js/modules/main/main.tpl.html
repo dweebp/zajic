@@ -11,8 +11,10 @@
         </div>
     </nav>
     <div class="container-fluid max-width">
+
         <div ng-repeat="piece in main.pieces" class="gridelem">
-            <div>{{piece.text}}</div>
+            {{piece.text}}
+            <div class="number">{{piece.number}}</div>
         </div>
 
     </div>
