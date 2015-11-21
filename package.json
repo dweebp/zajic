@@ -1,0 +1,11 @@
+{
+  "name": "pavel",
+  "version": "1.0.0",
+  "description": "interaktivni prezentace basne",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Smejkal",
+  "license": "ISC"
+}
