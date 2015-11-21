@@ -22,6 +22,8 @@
     .fa {
         font-size: 12vh;
         color: white;
+        cursor: pointer;
+        transition: all linear 0.3s;
     }
 }
 .header-button-wrapper {
@@ -30,9 +32,16 @@
     margin-top: 11px;
     margin-right: 40px;
     height: 100%;
+    .fa {
+        cursor: pointer;
+        transition: all linear 0.3s;
+    }
 }
 .max-width {
     margin: 0 auto !important;
+}
+.right {
+    float: right;
 }
 .square {
     width: 100%;
@@ -43,12 +52,8 @@ navbar-brand {
     position: relative;
     float: left;
     display: inline-block;
-}
-.toggle-player-button {
-    display: block;
-    float: left;
-    background: black;
-    color: white;
+    cursor: pointer;
+    transition: all linear 0.3s;
 }
 .gridelem {
     display: block;

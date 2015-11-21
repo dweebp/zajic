@@ -4,18 +4,20 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <div class="header-button-wrapper">
-                        <div class="toggle-player-button square" ng-click="main.toggle()">open</div>
+                        <div class="toggle-player-button square" ng-click="main.toggle()">
+                            <i class="fa fa-2x fa-bars"></i>
+                        </div>
                     </div>
 
-                    <a class="navbar-brand" href="#">Pavel Zajíc</a>
+                    <a class="navbar-brand " href="# ">Pavel Zajíc</a>
 
                 </div>
             </div>
         </nav>
 
-        <div ng-repeat="piece in main.pieces" class="gridelem" ng-click="main.addToPlaylist(piece)">
+        <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
             {{piece.text}}
-            <div class="number">{{piece.number}}</div>
+            <div class="number ">{{piece.number}}</div>
         </div>
     </div>
 </div>

@@ -75,6 +75,10 @@ gulp.task('bower', function () {
                     "main": ["dist/css/bootstrap.css",
             "dist/js/bootstrap.js"]
                 },
+                "bootstrap": {
+                    "main": ["dist/css/bootstrap.css",
+            "dist/js/bootstrap.js"]
+                },
                 "angular-ui-router": {
                     "main": ["release/angular-ui-router.min.js"]
                 },
@@ -82,7 +86,7 @@ gulp.task('bower', function () {
         }))
         .pipe(jsFilter)
         .pipe(debug())
-        .pipe(uglify())
+       // .pipe(uglify())
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest(dist_path + 'js/'))
         .pipe(jsFilter.restore)
@@ -94,7 +98,7 @@ gulp.task('bower', function () {
         }))
 
     .pipe(gulp.dest(base_path + 'styles/css/'))
-        //.pipe(minifycss())
+        .pipe(minifycss())
         .pipe(gulp.dest(dist_path + 'css/'))
         .pipe(cssFilter.restore)
         .pipe(fontFilter)
@@ -114,53 +118,48 @@ gulp.task('serve', function () {
         }));
 });
 
+gulp.task('move-files', function () {
+    gulp.src(['./config.json'])
+        .pipe(gulp.dest(dist_path))
+    gulp.src(['./audio/*.*'])
+        .pipe(gulp.dest(dist_path + 'audio/'));
+});
+
 
 
 gulp.task('dist:js', function () {
     gulp.src([
-        base_path + '/js/modules/main/main.main.module.js',
-        base_path + '/js/modules/main/main.main.controller.js',
-        base_path + '/js/modules/main/main.service.controller.js',
-        base_path + '/js/modules/main/main.service.controller.js',
-        base_path + '/js/modules/off-canvas/off-canvas.module.js',
+        base_path + 'js/app.js',
+        base_path + '/js/modules/main/main.module.js',
+        base_path + '/js/modules/main/main.controller.js',
+        base_path + '/js/modules/main/mainService.service.js',
         base_path + '/js/modules/off-canvas/off-canvas.controller.js',
         base_path + '/js/modules/off-canvas/off-canvas.factory.js',
-
-
-        base_path + '/app/templates/templates.js',
-        base_path + '/app/components/screen/screen.js',
-        base_path + '/app/components/screen/screen.directive.js',
-        base_path + '/app/components/screen/screen.service.js',
-        base_path + '/app/components/screen/screen.controller.js',
-        base_path + '/app/components/screen/services/*.js',
-        base_path + '/app/components/screen/sub-components/**/*.js',
-        base_path + '/app/*.js',
-
-        base_path + '/app/home/**/*.js',
-        base_path + '/*.js',
-
-
+        base_path + '/js/filters/convertToTrack.filter.js',
+        base_path + '/js/templates/templates.module.js',
+        base_path + '/js/templates/templates.js'
 
 
 
     ])
         .pipe(debug())
         .pipe(concat('app.all.min.js'))
-        // .pipe(uglify({mangle:flase,compress:false}))
+        .pipe(uglify({mangle:false,compress:false}))
         .pipe(gulp.dest(dist_path + '/js/'))
 })
 
 
 gulp.task('templates', function () {
-    return gulp.src([base_path + '/**/*.html',
-                     '!' + base_path + '/bower_components/**/*.html',
-                    '!' + base_path + '/dist/**/*.html',
-                     '!' + base_path + '/*.html'
+    return gulp.src([base_path + '**/*.html',
+                     '!' + base_path + 'bower_components/**/*.html',
+                     '!' + base_path + 'node_modules/**/*.html',
+                    '!' + base_path + 'dist/**/*.html',
+                     '!' + base_path + '*.html'
                     ])
         .pipe(debug())
         .pipe(templateCache('templates.js'))
-        .pipe(gulp.dest(base_path + '/js/templates'));
-        .pipe(gulp.dest(dist_path + '/js/templates'));
+        .pipe(gulp.dest(base_path + '/js/templates'))
+        .pipe(gulp.dest(dist_path + '/js'));
 });
 
 
@@ -188,7 +187,7 @@ gulp.task('copy:images', function () {
 
 
 gulp.task('build', function () {
-    return gulp.start('bower', 'app:sass', 'templates', 'dist:appcss', 'dist:js', 'index', 'copy:images')
+    return gulp.start('bower', 'app:sass', 'templates', 'dist:appcss', 'dist:js', 'index', 'copy:images', 'move-files')
 
 })
 

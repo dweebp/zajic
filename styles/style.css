@@ -65,7 +65,9 @@ body {
     border: none; }
   .off-canvas__nav .fa {
     font-size: 12vh;
-    color: white; }
+    color: white;
+    cursor: pointer;
+    transition: all linear 0.3s; }
 
 .header-button-wrapper {
   display: inline-block;
@@ -73,9 +75,15 @@ body {
   margin-top: 11px;
   margin-right: 40px;
   height: 100%; }
+  .header-button-wrapper .fa {
+    cursor: pointer;
+    transition: all linear 0.3s; }
 
 .max-width {
   margin: 0 auto !important; }
+
+.right {
+  float: right; }
 
 .square {
   width: 100%;
@@ -85,13 +93,9 @@ body {
 navbar-brand {
   position: relative;
   float: left;
-  display: inline-block; }
-
-.toggle-player-button {
-  display: block;
-  float: left;
-  background: black;
-  color: white; }
+  display: inline-block;
+  cursor: pointer;
+  transition: all linear 0.3s; }
 
 .gridelem {
   display: block;

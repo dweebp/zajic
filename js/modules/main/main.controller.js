@@ -3,9 +3,9 @@
         .module('poemApp')
         .controller('MainController', mainController);
 
-    mainController.$inject = ['CONFIG', '$rootScope', 'myOffCanvas', 'mainService'];
+    mainController.$inject = ['CONFIG', '$rootScope', '$templateCache', 'myOffCanvas', 'mainService'];
 
-    function mainController(CONFIG, $rootScope, myOffCanvas, mainService) {
+    function mainController(CONFIG, $rootScope, $templateCache, myOffCanvas, mainService) {
 
         var main = this;
         console.log('hi');
