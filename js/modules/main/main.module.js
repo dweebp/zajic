@@ -7,7 +7,7 @@
 
                     templateUrl: 'js/modules/main/main.tpl.html',
                     controller: 'MainController',
-                    controllerAs: 'ctrl'
+                    controllerAs: 'main'
 
 
                 })

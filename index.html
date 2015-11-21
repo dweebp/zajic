@@ -10,20 +10,44 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
+    <script src="bower_components/angular-media-player/dist/angular-media-player.js"></script>
+    <script src="bower_components/angular-off-canvas/off-canvas.js"></script>
+
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-off-canvas/off-canvas.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <ui-view></ui-view>
-    </div>
+    <style>
+        .off-canvas__container {
+            position: relative;
+        }
+        
+        .off-canvas__nav {
+            background-color: black;
+            color: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            -webkit-user-drag: none;
+        }
+
+    </style>
+    <ui-view></ui-view>
+
 
 
     <script src="js/app.js"></script>
     <script src="js/modules/main/main.module.js"></script>
     <script src="js/modules/main/main.controller.js"></script>
+    <script src="js/modules/off-canvas/off-canvas.factory.js"></script>
+    <script src="js/modules/off-canvas/off-canvas.controller.js"></script>
+
     <script>
         (function() {
             var initInjector = angular.injector(['ng']);
