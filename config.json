@@ -1,0 +1,51 @@
+{
+    "_comment": [
+        "tileOrder can be 'A' for 'alphabetically' or 'T' for 'tree'",
+        "topPanelHeight equals to percentage of document view height", 
+        "you can delete this _comment property"
+    ],
+    "audioURL": [
+        {
+            "status":"error", 
+            "url": "http://localhost:8000/audio/error"
+        },
+        {
+            "status": "warning",
+            "url": "http://localhost:8000/audio/warning"
+        },
+        {
+            "status":"no_data",
+            "url": "http://localhost:8000/audio/noData"
+        }
+    ],
+    
+    "sydeskMainURL": "http://sydesk-devel.sdnet:8080/",
+    "sydeskAPI": {
+        "tree": "services/api/tree/v1/tree/",
+        "edgeStatus": "services/api/results/v2/edgeStatus/",
+        "sydeskStatus": "services/api/results/v1/sydeskStatus/"
+    },
+    "authToken": "bamYCeVvVPb34SQ5Y2lyzjfPHz0=",
+    "statusUpdatePeriod": "120000",
+    "treeRefreshPeriod": "600000",
+    "autoSwitchPeriod": "20000",
+    "muteAudioLimit": "300000",
+    "serverCommunicationErrorLimit": "1000",
+    "serverCommunicationErrorLimit-def": "600000",
+    "serverCommunicationErrorMessage": "neprobíhá komunikace se serverem",
+    "serverErrorLimit": "1800000",
+    "serverErrorMessage": "výpočty neprobíhají",
+    "watchedStatuses": [
+        "warning",
+        "error",
+        "planned-breakdown",
+        "monitor-failure",
+        "no-data"
+    ],
+    "tileOrder": "T",
+    "tableDimensions": {
+        "width": "5",
+        "height": "5"
+    },
+    "topPanelHeight": "6"
+}
