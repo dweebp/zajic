@@ -10,5 +10,10 @@
             </div>
         </div>
     </nav>
-    <div>content</div>
+    <div class="container-fluid max-width">
+        <div ng-repeat="piece in main.pieces" class="gridelem">
+            <div>{{piece.text}}</div>
+        </div>
+
+    </div>
     <footer>footer</footer>

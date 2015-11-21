@@ -18,6 +18,9 @@
     margin-right: 40px;
     height: 100%;
 }
+.max-width {
+    margin: 0 auto !important;
+}
 .square {
     width: 100%;
     height: 0;
@@ -33,4 +36,16 @@ navbar-brand {
     float: left;
     background: black;
     color: white;
+}
+.gridelem {
+    width: 24vw;
+    height: 24vw;
+    color: white;
+    background-color: black;
+    float: left;
+    line-height: 24vw;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0.1vw
 }

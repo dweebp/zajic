@@ -3,13 +3,13 @@
         .module('poemApp')
         .controller('MainController', mainController);
 
-    mainController.$inject = ['myOffCanvas'];
+    mainController.$inject = ['CONFIG', 'myOffCanvas', 'mainService'];
 
-    function mainController(myOffCanvas) {
+    function mainController(CONFIG, myOffCanvas, mainService) {
 
         var main = this;
         console.log('hi');
-        main.hallo = 'hallo';
+        main.pieces = mainService.createPieces();
         main.toggle = myOffCanvas.toggle;
     }
 }());
