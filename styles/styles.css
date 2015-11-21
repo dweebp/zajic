@@ -46,10 +46,7 @@ body {
   transform: translate3d(0, 0, 0) translate(100vw); }
 
 .off-canvas__container {
-  position: relative;
-  height: 100%;
-  max-height: 100%;
-  overflow: hidden; }
+  position: relative; }
 
 .off-canvas__nav {
   background-color: black;
@@ -57,15 +54,9 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 50vw;
   height: 100%;
   -webkit-user-drag: none; }
-  .off-canvas__nav .navbar-default {
-    background-color: black;
-    border: none; }
-  .off-canvas__nav .fa {
-    font-size: 12vh;
-    color: white; }
 
 .header-button-wrapper {
   display: inline-block;
@@ -96,41 +87,26 @@ navbar-brand {
 .gridelem {
   display: block;
   position: relative;
-  width: 23vw;
-  height: 23vw;
+  width: 23.5vw;
+  height: 23.5vw;
   color: black;
   background-color: white;
   float: left;
   line-height: 23.5vw;
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-weight: bold;
   margin: 0.2vw;
   -webkit-box-shadow: 1px 1px 1px 0 rgba(15, 15, 15, 0.27);
-  box-shadow: 1px 1px 1px 0 rgba(15, 15, 15, 0.27);
-  cursor: pointer; }
-  .gridelem:hover {
-    background-color: beige; }
-  .gridelem .number {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 6vw;
-    height: 6vw;
-    line-height: 6vw;
-    font-size: 2vw;
-    color: white;
-    background-color: black; }
+  box-shadow: 1px 1px 1px 0 rgba(15, 15, 15, 0.27); }
 
-p.poem {
-  width: 80%;
-  margin: 50px auto 0 auto;
+.gridelem .number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6vw;
+  height: 6vw;
+  line-height: 6vw;
+  font-size: 3vw;
   color: white;
-  font-size: 12vw;
-  font-weight: bold; }
-
-.full-height {
-  height: 100vh;
-  max-height: 100vh;
-  position: relative;
-  overflow: hidden; }
+  background-color: black; }

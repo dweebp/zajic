@@ -2,11 +2,32 @@
     'use strict';
     angular.module('poemApp')
         .controller('MyOffCanvasCtrl', offCanvasCtrl);
+    offCanvasCtrl.$inject = ['myOffCanvas', 'CONFIG', '$scope', '$filter', 'mainService']
 
-
-    function offCanvasCtrl(myOffCanvas) {
+    function offCanvasCtrl(myOffCanvas, CONFIG, $scope, $filter, mainService) {
         var offCanvas = this;
 
+        offCanvas.playlist = [];
+        offCanvas.wtf = [];
+        offCanvas.poem = '';
+
+        console.log('mainService.getPlaylist():', mainService.getPlaylist());
+
+        offCanvas.getPlaylist = function () {
+            $scope.mediaPlayer.stop();
+            offCanvas.playlist = [];
+            offCanvas.poem = '';
+            angular.forEach(angular.copy(mainService.getPlaylist()), function (track) {
+                offCanvas.poem += ' ' + track.text;
+                offCanvas.playlist.push($filter('convertToTrack')(angular.copy(track)));
+
+            });
+
+        }
+
+        $scope.$on('pieceAdded', function (evt) {
+            offCanvas.getPlaylist();
+        });
         offCanvas.toggle = myOffCanvas.toggle;
     }
 }());

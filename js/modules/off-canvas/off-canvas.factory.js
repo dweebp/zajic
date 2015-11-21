@@ -7,7 +7,7 @@
     function myOffCanvas(cnOffCanvas) {
         return cnOffCanvas({
             controller: 'MyOffCanvasCtrl',
-            controllerAs: 'myOffCanvas',
+            controllerAs: 'offCanvas',
             templateUrl: 'js/modules/off-canvas/off-canvas.tpl.html'
         })
 

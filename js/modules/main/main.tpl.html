@@ -1,21 +1,21 @@
 <div class="off-canvas__container off-canvas__content">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <div class="header-button-wrapper">
-                    <div class="toggle-player-button square" ng-click="main.toggle()">open</div>
+    <div class="container-fluid max-widthfull-height my-scroll-area" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="header-button-wrapper">
+                        <div class="toggle-player-button square" ng-click="main.toggle()">open</div>
+                    </div>
+
+                    <a class="navbar-brand" href="#">Pavel Zajíc</a>
+
                 </div>
-
-                <a class="navbar-brand" href="#">Pavel Zajíc</a>
             </div>
-        </div>
-    </nav>
-    <div class="container-fluid max-width">
+        </nav>
 
-        <div ng-repeat="piece in main.pieces" class="gridelem">
+        <div ng-repeat="piece in main.pieces" class="gridelem" ng-click="main.addToPlaylist(piece)">
             {{piece.text}}
             <div class="number">{{piece.number}}</div>
         </div>
-
     </div>
-    <footer>footer</footer>
+</div>

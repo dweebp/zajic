@@ -16,19 +16,19 @@ var gulp = require('gulp'),
 
 //paths
 
-var base_path = './src/main/webapp/',
+var base_path = './',
     dist_path = base_path + 'dist/';
 
 gulp.task('app:sass', function () {
-    gulp.src([base_path + 'styles/**/**.scss'])
+    gulp.src([base_path + 'styles/scss/app.scss'])
         .pipe(debug())
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat('sdscreen.css'))
-        .pipe(gulp.dest(base_path + '/styles/css/'))
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest(base_path + '/styles/'))
 })
 
 gulp.task('dist:appcss', function () {
-    gulp.src([base_path + 'styles/css/sdscreen.css'])
+    gulp.src([base_path + 'styles/style.css'])
         .pipe(debug())
         .pipe(minifycss())
         .pipe(rename({
@@ -82,9 +82,8 @@ gulp.task('bower', function () {
         }))
         .pipe(jsFilter)
         .pipe(debug())
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(concat('vendor.min.js'))
-        .pipe(gulp.dest(base_path + '/assets/js/'))
         .pipe(gulp.dest(dist_path + 'js/'))
         .pipe(jsFilter.restore)
         .pipe(cssFilter)
@@ -100,7 +99,7 @@ gulp.task('bower', function () {
         .pipe(cssFilter.restore)
         .pipe(fontFilter)
         .pipe(debug())
-        .pipe(gulp.dest(base_path + '/styles/fonts/'))
+        .pipe(gulp.dest(base_path + '/fonts/'))
         .pipe(gulp.dest(dist_path + 'fonts/'))
 
 });
@@ -119,7 +118,15 @@ gulp.task('serve', function () {
 
 gulp.task('dist:js', function () {
     gulp.src([
-        base_path + '/app/templates/templates.module.js',
+        base_path + '/js/modules/main/main.main.module.js',
+        base_path + '/js/modules/main/main.main.controller.js',
+        base_path + '/js/modules/main/main.service.controller.js',
+        base_path + '/js/modules/main/main.service.controller.js',
+        base_path + '/js/modules/off-canvas/off-canvas.module.js',
+        base_path + '/js/modules/off-canvas/off-canvas.controller.js',
+        base_path + '/js/modules/off-canvas/off-canvas.factory.js',
+
+
         base_path + '/app/templates/templates.js',
         base_path + '/app/components/screen/screen.js',
         base_path + '/app/components/screen/screen.directive.js',
@@ -130,7 +137,7 @@ gulp.task('dist:js', function () {
         base_path + '/app/*.js',
 
         base_path + '/app/home/**/*.js',
-        base_path + '/app/common/**/*.js',
+        base_path + '/*.js',
 
 
 
@@ -144,20 +151,6 @@ gulp.task('dist:js', function () {
 })
 
 
-
-
-gulp.task('minjs', function () {
-    gulp.src([dist_path + '/js/utilities.js', dist_path + '/js/components.js', dist_path + '/app.js'])
-        .pipe(debug())
-        .pipe(concat('all.min.js'))
-
-    /*  .pipe(uglify({
-          mangle: false,
-
-      }))*/
-    .pipe(gulp.dest(dist_path + 'js/'));
-})
-
 gulp.task('templates', function () {
     return gulp.src([base_path + '/**/*.html',
                      '!' + base_path + '/bower_components/**/*.html',
@@ -166,7 +159,8 @@ gulp.task('templates', function () {
                     ])
         .pipe(debug())
         .pipe(templateCache('templates.js'))
-        .pipe(gulp.dest(base_path + '/app/templates'));
+        .pipe(gulp.dest(base_path + '/js/templates'));
+        .pipe(gulp.dest(dist_path + '/js/templates'));
 });
 
 
@@ -174,7 +168,7 @@ gulp.task('index', function () {
     gulp.src(base_path + '/index.html')
         .pipe(htmlreplace({
             'app': ['js/app.all.min.js'],
-            'vendor': 'js/vendor.min.js',
+            'bower': 'js/vendor.min.js',
             'app-css': 'css/app.min.css',
             'bower-css': 'css/bower.min.css',
 

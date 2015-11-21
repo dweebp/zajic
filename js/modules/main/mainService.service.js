@@ -8,7 +8,10 @@
     function mainService(CONFIG) {
         var factory = {
             createPieces: createPieces,
-            shuffleArray: shuffleArray
+            shuffleArray: shuffleArray,
+            playlist: [],
+            getPlaylist: getPlaylist,
+            addToPlaylist: addToPlaylist
         };
 
         return factory;
@@ -22,7 +25,7 @@
                     id: CONFIG.tracks[i].id,
                     number: i + 1,
                     text: CONFIG.tracks[i].text,
-                    filename: CONFIG.tracks[i].file_name + CONFIG.formats[0],
+                    filename: CONFIG.tracks[i].file_name + '.' + CONFIG.formats[0],
                 }
                 pieces.push(piece);
             }
@@ -43,6 +46,14 @@
             }
 
             return array;
+        }
+
+        function addToPlaylist(track) {
+            factory.playlist.push(track);
+        }
+
+        function getPlaylist() {
+            return factory.playlist;
         }
     }
 }());

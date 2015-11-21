@@ -1,4 +1,33 @@
 <div class="off-canvas__nav">
-    <h3>Hello {{name}}</h3>
-    <p><a href ng-click="myOffCanvas.toggle()">Close Me</a></p>
+    <div class="my-scroll-area full-height" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="header-button-wrapper">
+                        <i class="fa fa-5x fa-volume-up" ng-click="mediaPlayer.play(0, false) "></i>
+                    </div>
+
+                </div>
+                <p class="navbar-text navbar-right" ng-click="offCanvas.toggle()"><i class="fa fa-5x fa-caret-right"></i></p>
+            </div>
+        </nav>
+
+
+        <h1 class="sc-button ">MLUV</h1>
+        <p class="poem ">
+            {{offCanvas.poem}}
+        </p>
+
+        <audio media-player="mediaPlayer " data-playlist="offCanvas.playlist ">
+            <source src="http://upload.wikimedia.org/wikipedia/en/d/d0/Rick_Astley_-_Never_Gonna_Give_You_Up.ogg " type="audio/ogg ">
+        </audio>
+        <audio>
+            <source src="http://upload.wikimedia.org/wikipedia/en/d/d0/Rick_Astley_-_Never_Gonna_Give_You_Up.ogg " type="audio/ogg ">
+        </audio>
+
+        <div class="sc-duration ">
+            <span>{{mediaPlayer.formatTime}}</span> - <span>{{mediaPlayer.formatDuration}}</span>
+        </div>
+    </div>
+
 </div>
