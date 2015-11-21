@@ -1,0 +1,23 @@
+{
+  "name": "pavel",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dweebp/zajic",
+  "authors": [
+    "dweebp <info@jansmejkal.cz>"
+  ],
+  "description": "interaktivni prezentace basne",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.3.*"
+  }
+}
