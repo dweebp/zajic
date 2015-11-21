@@ -1,24 +1,16 @@
 {
     "_comment": [
-        "tileOrder can be 'A' for 'alphabetically' or 'T' for 'tree'",
-        "topPanelHeight equals to percentage of document view height", 
-        "you can delete this _comment property"
+        "app config. everything shoul go here"
     ],
-    "audioURL": [
+    "tracks": [
         {
-            "status":"error", 
+            "id": "",
+            "text": "url",
             "url": "http://localhost:8000/audio/error"
         },
-        {
-            "status": "warning",
-            "url": "http://localhost:8000/audio/warning"
-        },
-        {
-            "status":"no_data",
-            "url": "http://localhost:8000/audio/noData"
-        }
+
     ],
-    
+
     "sydeskMainURL": "http://sydesk-devel.sdnet:8080/",
     "sydeskAPI": {
         "tree": "services/api/tree/v1/tree/",
