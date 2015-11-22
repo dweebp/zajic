@@ -45,6 +45,10 @@ body {
   -o-transform: translate3d(0, 0, 0) translate(100vw);
   transform: translate3d(0, 0, 0) translate(100vw); }
 
+html,
+body {
+  font-family: 'Monda', sans-serif !important; }
+
 .off-canvas__container {
   position: relative;
   height: 100%;
@@ -72,18 +76,25 @@ body {
 .header-button-wrapper {
   display: inline-block;
   float: left;
-  margin-top: 11px;
   margin-right: 40px;
   height: 100%; }
   .header-button-wrapper .fa {
     cursor: pointer;
     transition: all linear 0.3s; }
 
+.navbar,
+.navbar-brand {
+  font-size: 12vh;
+  line-height: 15vh; }
+
 .max-width {
   margin: 0 auto !important; }
 
 .right {
   float: right; }
+
+.left {
+  float: left; }
 
 .square {
   width: 100%;

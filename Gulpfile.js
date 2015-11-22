@@ -129,15 +129,15 @@ gulp.task('move-files', function () {
 
 gulp.task('dist:js', function () {
     gulp.src([
+        base_path + '/js/templates/templates.module.js',
+        base_path + '/js/templates/templates.js',
         base_path + 'js/app.js',
         base_path + '/js/modules/main/main.module.js',
         base_path + '/js/modules/main/main.controller.js',
         base_path + '/js/modules/main/mainService.service.js',
         base_path + '/js/modules/off-canvas/off-canvas.controller.js',
         base_path + '/js/modules/off-canvas/off-canvas.factory.js',
-        base_path + '/js/filters/convertToTrack.filter.js',
-        base_path + '/js/templates/templates.module.js',
-        base_path + '/js/templates/templates.js'
+        base_path + '/js/filters/convertToTrack.filter.js'
 
 
 
@@ -187,7 +187,7 @@ gulp.task('copy:images', function () {
 
 
 gulp.task('build', function () {
-    return gulp.start('bower', 'app:sass', 'templates', 'dist:appcss', 'dist:js', 'index', 'copy:images', 'move-files')
+    return gulp.start('bower', 'app:sass', 'dist:appcss','templates', 'dist:js', 'index', 'copy:images', 'move-files')
 
 })
 
