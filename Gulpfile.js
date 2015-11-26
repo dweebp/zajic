@@ -86,7 +86,7 @@ gulp.task('bower', function () {
         }))
         .pipe(jsFilter)
         .pipe(debug())
-       // .pipe(uglify())
+        // .pipe(uglify())
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest(dist_path + 'js/'))
         .pipe(jsFilter.restore)
@@ -144,7 +144,10 @@ gulp.task('dist:js', function () {
     ])
         .pipe(debug())
         .pipe(concat('app.all.min.js'))
-        .pipe(uglify({mangle:false,compress:false}))
+        .pipe(uglify({
+            mangle: false,
+            compress: false
+        }))
         .pipe(gulp.dest(dist_path + '/js/'))
 })
 
@@ -187,7 +190,7 @@ gulp.task('copy:images', function () {
 
 
 gulp.task('build', function () {
-    return gulp.start('bower', 'app:sass', 'dist:appcss','templates', 'dist:js', 'index', 'copy:images', 'move-files')
+    return gulp.start('bower', 'app:sass', 'dist:appcss', 'templates', 'dist:js', 'index', 'copy:images', 'move-files')
 
 })
 
@@ -196,5 +199,5 @@ gulp.task('watch', function () {
 
     gulp.watch(base_path + '/img//**/*.{jpg,jpeg,png,gif}', ['copy:images']);
     gulp.watch(base_path + '/**/*.scss', ['app:sass']);
-    gulp.watch(base_path + '/app/**/*.html', ['templates']);
+    gulp.watch(base_path + '/js/**/*.html', ['templates']);
 });

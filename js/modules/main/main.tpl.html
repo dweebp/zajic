@@ -1,24 +1,78 @@
 <div class="off-canvas__container off-canvas__content">
-    <div class="container-fluid max-widthfull-height my-scroll-area" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <div class="header-button-wrapper">
-                        <div class="toggle-player-button square" ng-click="main.toggle()">
-                            <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-bars"></i></p>
+    <div class="my-scroll-area full-height" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="header-button-wrapper">
+                            <div class="toggle-player-button square" ng-click="main.toggle()">
+                                <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-bars"></i></p>
 
+                            </div>
                         </div>
+
+                        <a class="navbar-brand " href="# ">Pavel Zajíc</a>
+
                     </div>
-
-                    <a class="navbar-brand " href="# ">Pavel Zajíc</a>
-
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
-            {{piece.text}}
-            <div class="number ">{{piece.number}}</div>
+            <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
+                {{piece.text}}
+                <div class="number ">{{piece.number}}</div>
+            </div>
         </div>
     </div>
+
+
+    <!-- PUVODNI SPRAVNY
+       <div class="my-scroll-area" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="header-button-wrapper">
+                            <div class="toggle-player-button square" ng-click="main.toggle()">
+                                <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-bars"></i></p>
+
+                            </div>
+                        </div>
+
+                        <a class="navbar-brand " href="# ">Pavel Zajíc</a>
+
+                    </div>
+                </div>
+            </nav>
+
+            <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
+                {{piece.text}}
+                <div class="number ">{{piece.number}}</div>
+            </div>
+        </div>
+    </div>
+   -->
+    <!-- SABLONA
+
+    <div class="my-scroll-area full-height" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="header-button-wrapper">
+                            <i class="fa fa-5x fa-volume-up" ng-click="mediaPlayer.play(0, false) " ng-show="offCanvas.playlist.length>0"></i>
+
+                        </div>
+
+                    </div>
+                    <p class="navbar-text right" ng-click="offCanvas.toggle()"><i class="fa fa-5x fa-caret-right"></i></p>
+                </div>
+            </nav>
+            <p class="poem ">
+                {{offCanvas.poem}}
+            </p>
+        </div>
+    </div>
+    -->
+
 </div>
