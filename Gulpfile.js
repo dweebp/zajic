@@ -197,7 +197,7 @@ gulp.task('build', function () {
 
 gulp.task('watch', function () {
 
-    gulp.watch(base_path + '/img//**/*.{jpg,jpeg,png,gif}', ['copy:images']);
+    gulp.watch(base_path + '/img/**/*.{jpg,jpeg,png,gif}', ['copy:images']);
     gulp.watch(base_path + '/**/*.scss', ['app:sass']);
     gulp.watch(base_path + '/js/**/*.html', ['templates']);
 });
