@@ -3,7 +3,7 @@
         "app config. everything should go here"
     ],
     "tracks_folder": "audio/",
-    "formats": ["ogg"],
+    "formats": ["mp3"],
     "tracks": [
         {
             "id": "1",

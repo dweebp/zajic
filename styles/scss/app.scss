@@ -1,4 +1,5 @@
 @import 'vars.scss';
+@import 'mixins.scss';
 @import 'offCanvas.scss';
 html,
 body {
@@ -18,18 +19,83 @@ body {
     font-size: $nav-font-size;
     line-height: $nav-icons-line-height;
     margin: 7.5px -0px;
+    @include breakpoint(xs) {
+        font-size: $nav-font-size-sm;
+        line-height: $nav-icons-line-height-sm;
+        li {
+            a {
+                line-height: $nav-icons-line-height-sm;
+                .fa {
+                    font-size: $nav-font-size-sm !important;
+                }
+            }
+        }
+    }
+    @include breakpoint(sm) {
+        font-size: $nav-font-size-sm;
+        line-height: $nav-icons-line-height-sm;
+        li {
+            a {
+                line-height: $nav-icons-line-height-sm;
+                .fa {
+                    font-size: $nav-font-size-sm !important;
+                }
+            }
+        }
+    }
+    @include breakpoint(md) {
+        font-size: $nav-font-size;
+        line-height: $nav-icons-line-height;
+        li {
+            a {
+                line-height: $nav-icons-line-height;
+                .fa {
+                    font-size: $nav-font-size !important;
+                }
+            }
+        }
+    }
+    @include breakpoint(lg) {
+        font-size: $nav-font-size;
+        line-height: $nav-icons-line-height;
+        li {
+            a {
+                line-height: $nav-icons-line-height;
+                .fa {
+                    font-size: $nav-font-size !important;
+                }
+            }
+        }
+    }
+    @include breakpoint(ret) {
+        font-size: $nav-font-size;
+        line-height: $nav-icons-line-height;
+        li {
+            &:last-of-type {
+                display: block;
+            }
+            a {
+                line-height: $nav-icons-line-height;
+                .fa {
+                    font-size: $nav-font-size !important;
+                }
+            }
+        }
+    }
     li {
         float: none;
         display: inline-block;
         &.pull-left,
         &.pull-right {
-            min-width: 5.5vh;
-            min-height: 5.5vh;
+            min-width: 10%;
+            min-height: 10%;
+            height: 10%;
             text-align: center;
         }
         a {
             font-weight: bold;
             color: #6c6c6c;
+            line-height: $nav-icons-line-height;
             &:hover {
                 color: black;
                 background-color: rgba(255, 255, 255, 0.13);
@@ -38,8 +104,8 @@ body {
             &:focus {
                 background-color: transparent;
             }
-            i {
-                font-size: $nav-font-size;
+            .fa {
+                font-size: $nav-font-size !important;
             }
         }
     }

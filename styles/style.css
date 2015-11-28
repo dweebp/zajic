@@ -60,27 +60,71 @@ body {
 .navbar-nav {
   width: 100%;
   text-align: center;
-  font-size: 4vh;
-  line-height: 8.5vh;
+  font-size: 1.3em;
+  line-height: 2em;
   margin: 7.5px -0px; }
+  @media (max-width: 767px) {
+    .navbar-nav {
+      font-size: 1em;
+      line-height: 1em; }
+      .navbar-nav li a {
+        line-height: 1em; }
+        .navbar-nav li a .fa {
+          font-size: 1em !important; } }
+  @media (min-width: 768px) {
+    .navbar-nav {
+      font-size: 1em;
+      line-height: 1em; }
+      .navbar-nav li a {
+        line-height: 1em; }
+        .navbar-nav li a .fa {
+          font-size: 1em !important; } }
+  @media (min-width: 992px) {
+    .navbar-nav {
+      font-size: 1.3em;
+      line-height: 2em; }
+      .navbar-nav li a {
+        line-height: 2em; }
+        .navbar-nav li a .fa {
+          font-size: 1.3em !important; } }
+  @media (min-width: 1200px) {
+    .navbar-nav {
+      font-size: 1.3em;
+      line-height: 2em; }
+      .navbar-nav li a {
+        line-height: 2em; }
+        .navbar-nav li a .fa {
+          font-size: 1.3em !important; } }
+  @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+    .navbar-nav {
+      font-size: 1.3em;
+      line-height: 2em; }
+      .navbar-nav li:last-of-type {
+        display: block; }
+      .navbar-nav li a {
+        line-height: 2em; }
+        .navbar-nav li a .fa {
+          font-size: 1.3em !important; } }
   .navbar-nav li {
     float: none;
     display: inline-block; }
     .navbar-nav li.pull-left, .navbar-nav li.pull-right {
-      min-width: 5.5vh;
-      min-height: 5.5vh;
+      min-width: 10%;
+      min-height: 10%;
+      height: 10%;
       text-align: center; }
     .navbar-nav li a {
       font-weight: bold;
-      color: #6c6c6c; }
+      color: #6c6c6c;
+      line-height: 2em; }
       .navbar-nav li a:hover {
         color: black;
         background-color: rgba(255, 255, 255, 0.13);
         border-color: black; }
       .navbar-nav li a:focus {
         background-color: transparent; }
-      .navbar-nav li a i {
-        font-size: 4vh; }
+      .navbar-nav li a .fa {
+        font-size: 1.3em !important; }
 
 .off-canvas__content .navbar-default {
   background-color: white;
@@ -99,7 +143,7 @@ body {
     background-color: black !important;
     border: none !important; }
   .off-canvas__nav .fa {
-    font-size: 6vh;
+    font-size: 1.5em;
     color: white;
     cursor: pointer;
     transition: all linear 0.3s; }
