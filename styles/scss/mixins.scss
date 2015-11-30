@@ -28,3 +28,10 @@
         @warn "Breakpoint mixin supports: xs, sm, md, lg, ret";
     }
 }
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}

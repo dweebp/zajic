@@ -2,9 +2,9 @@
     'use strict';
     angular.module('poemApp')
         .controller('MyOffCanvasCtrl', offCanvasCtrl);
-    offCanvasCtrl.$inject = ['myOffCanvas', 'CONFIG', '$scope', '$filter', 'mainService']
+    offCanvasCtrl.$inject = ['myOffCanvas', 'CONFIG', '$rootScope', '$scope', '$filter', 'mainService']
 
-    function offCanvasCtrl(myOffCanvas, CONFIG, $scope, $filter, mainService) {
+    function offCanvasCtrl(myOffCanvas, CONFIG, $rootScope, $scope, $filter, mainService) {
         var offCanvas = this;
 
         offCanvas.playlist = [];
@@ -23,6 +23,12 @@
 
             });
 
+        }
+        offCanvas.resetPlaylist = function () {
+            $rootScope.$broadcast('resetPlaylist');
+            mainService.resetPlaylist();
+            offCanvas.getPlaylist();
+            offCanvas.toggle();
         }
 
         $scope.$on('pieceAdded', function (evt) {

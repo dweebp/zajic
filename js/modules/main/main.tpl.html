@@ -1,80 +1,59 @@
-<div class="off-canvas__container off-canvas__content">
+<div class="off-canvas__container off-canvas__content" ng-class="main.showInfo ? 'info' : ''">
     <div class="my-scroll-area full-height" ng-nicescroll nice-option="{cursorcolor: '#e2edff'}">
         <div class="container-fluid">
-            <!--
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="header-button-wrapper quarter">
-                        <div class="toggle-player-button square" ng-click="main.toggle()">
-                            <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-terminal"></i></p>
-
-                        </div>
-                    </div>
-                    <div class="navbar-text half">
-                        <a href="# ">#zajic</a>
-                        <a href="# ">#ncb2015</a>
-
-                    </div>
-                    <div class="header-button-wrapper quarter">
-                        <div class="toggle-player-button square" ng-click="main.toggle()">
-                            <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-question-circle "></i></p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </nav>
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <div class="header-button-wrapper quarter">
-                                <div class="toggle-player-button square" ng-click="main.toggle()">
-                                    <p class="navbar-text left" ng-click="offCanvas.toggle()"> <i class="fa fa-terminal "></i></p>
-
-                                </div>
-                        </li>
-
-                    </ul>
-                    </div>
-                    <a class="navbar-brand" href="#">Brand</a>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <div class="header-button-wrapper quarter">
-                                <div class="toggle-player-button square" ng-click="main.toggle()">
-                                    <p class="navbar-text"> <i class="fa fa-question-circle "></i></p>
-
-                                </div>
-                        </li>
-                    </ul>
-                    </div>
-            </nav>
-
-            <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
-                {{piece.text}}
-                <div class="number ">{{piece.number}}</div>
-            </div>
-            </div>
-        </div>
-
--->
             <nav class="nav navbar-nav">
 
                 <ul class="nav navbar-nav">
                     <li class="pull-left">
                         <a href="#" ng-click="main.toggle()" ng-style="{'visibility': main.selectedPieces ? 'visible' : 'hidden'}"> <i class="fa fa-terminal"></i></a>
 
+
                     </li>
-                    <li> <a href="# ">#zajic</a></li>
+                    <li> <a href="http://pavelzajic.cz" target="_blank">#zajic</a></li>
                     <li>
-                        <a href="# ">#ncb2015</a>
+                        <a href="http://nakladatelstvi.hostbrno.cz/nakladatelstvi/poezie/ostatni/nejlepsi-ceske-basne-2015-1140" target="_blank">#b2015</a>
                     </li>
-                    <li class="pull-right"><a href="#"><i class="fa fa-question-circle "></i></a></li>
+                    <li class="pull-right">
+
+
+                        <a href="#" ng-click="main.toggleShowInfo()">
+                            <i class="fa fa-question " ng-class="main.showInfo ? 'black' : ''">
+                            </i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <div class="center">
+            <div class="clearfix">
 
-                <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) ">
+
+            </div>
+            <div class="center">
+                <div ng-show="main.showInfo" class="info-block" style="{min-height: main.getInfoBoxHeight()}">
+                    <p>
+                        Někdy v období mezi střední školou, nástupem na vysokou či prvním skutečným zaměstnáním číhá na mladého člověka možnost opravdové svobody, opravdových přátelství a opravdové finanční nezávislosti. Škála proroků šířících výše vypsaná pozitiva se rekrutuje nejčastěji z řad vašich opravdu blízkých náhodných známých, kteří dostali dar rozeznat vaši skutečnou lidskost.
+                    </p>
+                    <p>
+                        „Jsme přesvědčeni, že je nutné tuto dovednost prohlubovat převážně u mladých lidí, kteří nemají cestu ke svobodě zkalenou nadbytečnými životními zkušenostmi. Známe tvoje sny, a tady ti dáváme prostředek/nástroj, jak je realizovat.“
+                    </p>
+                    <p>
+                        Do jaké míry jsme vlastně schopni sami svobodně rozhodnout o své budoucnosti? Je možné, že tento druh svobody je ve skutečnosti naším tiše trpěným pokrytectvím? Třeba je opravdu potřeba vtěsnat tu nespecifikovanou motivaci do symbolu — diamantu. Třeba bude opravdu lépe, když za nás velká rozhodnutí budou dělat jiní.
+                    </p>
+                    <p>
+                        text: Pavel Zajíc (1988)
+                        <br /> Básník. Vystudoval Sdružená uměnovědná studia na Masarykově univerzitě v Brně. Zpívá bas v mužském sboru Láska opravdivá. Básně publikoval v různých literárních časopisech, knižně vydal sbírku básní Ona místa (2013) a k vydání připravuje sbírku druhou s názvem peníze.
+                        <br />
+                        <a href="http://pavelzajic.cz" target="_blank">pavelzajic.cz</a>
+                    </p>
+
+                    <p>
+                        Knihu nejlepší české básně 2015 kupte u nakladatelství <a href="http://nakladatelstvi.hostbrno.cz/nakladatelstvi/poezie/ostatni/nejlepsi-ceske-basne-2015-1140" target="_blank">Host</a>
+
+                    </p>
+                </div>
+                <div class="copy" id="copy" ng-show="main.showInfo">
+                    &copy; 2015 <a href="http://www.jansmejkal.cz" target="_blank">Jan Smejkal</a>
+                </div>
+                <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) " ng-hide="main.showInfo" ng-class="{next : piece.isNext, clicked : piece.isClicked}">
                     <div class="square-content">
                         <div><span>
                                 {{piece.text}}

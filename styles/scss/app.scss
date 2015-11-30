@@ -1,10 +1,18 @@
 @import 'vars.scss';
 @import 'mixins.scss';
 @import 'offCanvas.scss';
+@font-face {
+    font-family: 'inderregular';
+    src: url('../fonts/inder-regular-webfont.eot');
+    src: url('../fonts/inder-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/inder-regular-webfont.woff2') format('woff2'), url('../fonts/inder-regular-webfont.woff') format('woff'), url('../fonts/inder-regular-webfont.ttf') format('truetype'), url('../fonts/inder-regular-webfont.svg#inderregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 html,
 body {
-    font-family: 'Monda', sans-serif !important;
+    font-family: 'inderregular', sans-serif !important;
     height: 100vh;
+    overflow: hidden;
 }
 .off-canvas__container {
     position: relative;
@@ -13,6 +21,13 @@ body {
     max-height: 100%;
     overflow: hidden;
 }
+.max {
+    width: 100%;
+    background: black;
+}
+nav {
+    @include clearfix;
+}
 .navbar-nav {
     width: 100%;
     text-align: center;
@@ -20,13 +35,13 @@ body {
     line-height: $nav-icons-line-height;
     margin: 7.5px -0px;
     @include breakpoint(xs) {
-        font-size: $nav-font-size-sm;
-        line-height: $nav-icons-line-height-sm;
+        font-size: $nav-font-size-xs;
+        line-height: $nav-icons-line-height-xs;
         li {
             a {
-                line-height: $nav-icons-line-height-sm;
+                line-height: $nav-icons-line-height-xs;
                 .fa {
-                    font-size: $nav-font-size-sm !important;
+                    font-size: $nav-font-size-xs !important;
                 }
             }
         }
@@ -115,6 +130,15 @@ body {
         background-color: white;
         border: none;
     }
+    &.info {
+        .fa-question.black {
+            color: black;
+            font-weight: normal;
+            &:hover {
+                color: #6c6c6c
+            }
+        }
+    }
 }
 .off-canvas__nav {
     background-color: black;
@@ -130,14 +154,48 @@ body {
         border: none !important;
     }
     .fa {
-        font-size: $nav-icons-size;
+        //  font-size: $nav-icons-size;
         color: white;
         cursor: pointer;
         transition: all linear 0.3s;
     }
 }
+.clearfix {
+    @include clearfix;
+}
 .center {
     margin: 0 auto;
+}
+.info-block {
+    @include clearfix;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5vh 5vw;
+    font-size: 1.2em;
+    a {
+        color: white;
+        text-decoration: underline;
+        &:hover,
+        &:active,
+        &:visited {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+.copy {
+    text-align: right;
+    a {
+        color: black;
+        text-decoration: underline;
+        &:hover,
+        &:active,
+        &:visited {
+            color: black;
+            text-decoration: none;
+        }
+    }
 }
 .gridelem {
     display: block;
@@ -193,6 +251,16 @@ body {
         vertical-align: middle;
         color: black
     }
+    &.next {
+        .number {
+            background-color: #27ac1c;
+        }
+    }
+    &.clicked {
+        .number {
+            background-color: #a0a0a0;
+        }
+    }
 }
 p.poem {
     width: 80%;
@@ -207,4 +275,7 @@ p.poem {
     min-height: auto;
     position: relative;
     overflow: hidden;
+}
+#tooltip {
+    display: block;
 }

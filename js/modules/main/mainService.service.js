@@ -11,7 +11,8 @@
             shuffleArray: shuffleArray,
             playlist: [],
             getPlaylist: getPlaylist,
-            addToPlaylist: addToPlaylist
+            addToPlaylist: addToPlaylist,
+            resetPlaylist: resetPlaylist
         };
 
         return factory;
@@ -26,7 +27,11 @@
                     number: i + 1,
                     text: CONFIG.tracks[i].text,
                     filename: CONFIG.tracks[i].file_name + '.' + CONFIG.formats[0],
+                    isClicked: false,
+                    isNext: false
                 }
+
+                if (CONFIG.tracks[i].id == 1) piece.isNext = true;
                 pieces.push(piece);
             }
             console.log('pieces:', pieces);
@@ -48,12 +53,17 @@
             return array;
         }
 
+
         function addToPlaylist(track) {
             factory.playlist.push(track);
         }
 
         function getPlaylist() {
             return factory.playlist;
+        }
+
+        function resetPlaylist() {
+            factory.playlist = [];
         }
     }
 }());
