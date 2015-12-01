@@ -273,6 +273,23 @@ p.poem {
     position: relative;
     overflow: hidden;
 }
+.socialLinks {
+    padding-top: 2em;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.33);
+    &.big {
+        padding: 2em;
+        .fa {
+            font-size: 5vw;
+        }
+    }
+    .fa {
+        font-size: 2em;
+        &:nth-child(1) {
+            margin: 0 1em;
+        }
+    }
+}
 #tooltip {
     display: block;
 }

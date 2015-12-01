@@ -9,6 +9,8 @@
 
         offCanvas.playlist = [];
         offCanvas.wtf = [];
+        offCanvas.socialText = CONFIG.socialText;
+        offCanvas.socialLink = CONFIG.socialLink;
         offCanvas.poem = '';
 
         console.log('mainService.getPlaylist():', mainService.getPlaylist());

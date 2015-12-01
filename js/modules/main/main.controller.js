@@ -14,6 +14,8 @@
         main.clickInProgress = false;
         main.toggle = myOffCanvas.toggle;
 
+        main.socialText = CONFIG.socialText;
+        main.socialLink = CONFIG.socialLink;
 
         main.toggleShowInfo = function () {
             main.showInfo = !main.showInfo;

@@ -2,6 +2,7 @@
     "_comment": [
         "app config. everything should go here"
     ],
+    "socialText": "pavel zajíc - a přece zařazuješ vyšší stupeň - nejlepší české básně 2015 #penize",
     "tracks_folder": "audio/",
     "formats": ["mp3"],
     "tracks": [
@@ -30,121 +31,121 @@
             "text": "na bránu",
             "file_name": "5_na_branu"
         }, {
-    "id": "6",
-    "text": "jdeš nahoru,",
-    "file_name": "6_jdes_nahoru"
+            "id": "6",
+            "text": "jdeš nahoru,",
+            "file_name": "6_jdes_nahoru"
 }, {
-    "id": "7",
-    "text": "rosteš",
-    "file_name": "7_rostes"
+            "id": "7",
+            "text": "rosteš",
+            "file_name": "7_rostes"
 }, {
-    "id": "8",
-    "text": "před očima,",
-    "file_name": "8_pred_ocima"
+            "id": "8",
+            "text": "před očima,",
+            "file_name": "8_pred_ocima"
 }, {
-    "id": "9",
-    "text": "jak diamanty",
-    "file_name": "9_jak_diamanty"
+            "id": "9",
+            "text": "jak diamanty",
+            "file_name": "9_jak_diamanty"
 }, {
-    "id": "10",
-    "text": "jak diamanty",
-    "file_name": "10_jak_diamanty"
+            "id": "10",
+            "text": "jak diamanty",
+            "file_name": "10_jak_diamanty"
 }, {
-    "id": "11",
-    "text": "kamarád,",
-    "file_name": "11_kamarad_2"
+            "id": "11",
+            "text": "kamarád,",
+            "file_name": "11_kamarad_2"
 }, {
-    "id": "12",
-    "text": "přítel,",
-    "file_name": "12_pritel"
+            "id": "12",
+            "text": "přítel,",
+            "file_name": "12_pritel"
 }, {
-    "id": "13",
-    "text": "stojí a tleská",
-    "file_name": "13_stoji_a_tleska"
+            "id": "13",
+            "text": "stojí a tleská",
+            "file_name": "13_stoji_a_tleska"
 }, {
-    "id": "14",
-    "text": "stojíš a tleskáš",
-    "file_name": "14_stojis_a_tleskas"
+            "id": "14",
+            "text": "stojíš a tleskáš",
+            "file_name": "14_stojis_a_tleskas"
 }, {
-    "id": "15",
-    "text": "opravdový přítel,",
-    "file_name": "15_opravdovy_pritel"
+            "id": "15",
+            "text": "opravdový přítel,",
+            "file_name": "15_opravdovy_pritel"
 }, {
-    "id": "16",
-    "text": "kamarád,",
-    "file_name": "16_kamarad"
+            "id": "16",
+            "text": "kamarád,",
+            "file_name": "16_kamarad"
 }, {
-    "id": "17",
-    "text": "pláče",
-    "file_name": "17_place"
+            "id": "17",
+            "text": "pláče",
+            "file_name": "17_place"
 }, {
-    "id": "18",
-    "text": "křičí,",
-    "file_name": "18_krici"
+            "id": "18",
+            "text": "křičí,",
+            "file_name": "18_krici"
 }, {
-    "id": "19",
-    "text": "stojí a tleská",
-    "file_name": "19_stoji_a_tleska_2"
+            "id": "19",
+            "text": "stojí a tleská",
+            "file_name": "19_stoji_a_tleska_2"
 }, {
-    "id": "20",
-    "text": "stojíš,",
-    "file_name": "20_stojis"
+            "id": "20",
+            "text": "stojíš,",
+            "file_name": "20_stojis"
 }, {
-    "id": "21",
-    "text": "tleskáš,",
-    "file_name": "21_tleskas"
+            "id": "21",
+            "text": "tleskáš,",
+            "file_name": "21_tleskas"
 }, {
-    "id": "22",
-    "text": "pláčeš",
-    "file_name": "22_places"
+            "id": "22",
+            "text": "pláčeš",
+            "file_name": "22_places"
 }, {
-    "id": "23",
-    "text": "s bráchou",
-    "file_name": "23_s_brachou"
+            "id": "23",
+            "text": "s bráchou",
+            "file_name": "23_s_brachou"
 }, {
-    "id": "24",
-    "text": "jdete teď nahoru",
-    "file_name": "24_jdete_ted_nahoru"
+            "id": "24",
+            "text": "jdete teď nahoru",
+            "file_name": "24_jdete_ted_nahoru"
 }, {
-    "id": "25",
-    "text": "miluje",
-    "file_name": "25_milujelong_kopie"
+            "id": "25",
+            "text": "miluje",
+            "file_name": "25_milujelong_kopie"
 }, {
-    "id": "26",
-    "text": "tvoji",
-    "file_name": "26_tvoji"
+            "id": "26",
+            "text": "tvoji",
+            "file_name": "26_tvoji"
 }, {
-    "id": "27",
-    "text": "novou budoucnost",
-    "file_name": "27_novou_budoucnost"
+            "id": "27",
+            "text": "novou budoucnost",
+            "file_name": "27_novou_budoucnost"
 }, {
-    "id": "28",
-    "text": "miluje",
-    "file_name": "28_milujelong"
+            "id": "28",
+            "text": "miluje",
+            "file_name": "28_milujelong"
 }, {
-    "id": "29",
-    "text": "jak jdeš",
-    "file_name": "29_jak_jdes"
+            "id": "29",
+            "text": "jak jdeš",
+            "file_name": "29_jak_jdes"
 }, {
-    "id": "30",
-    "text": "24. 10. 2009",
-    "file_name": "30_24-10-2009"
+            "id": "30",
+            "text": "24. 10. 2009",
+            "file_name": "30_24-10-2009"
 }, {
-    "id": "31",
-    "text": "víc",
-    "file_name": "31_vic"
+            "id": "31",
+            "text": "víc",
+            "file_name": "31_vic"
 }, {
-    "id": "32",
-    "text": "víc a",
-    "file_name": "32_vic_a"
+            "id": "32",
+            "text": "víc a",
+            "file_name": "32_vic_a"
 }, {
-    "id": "33",
-    "text": "up",
-    "file_name": "33_UP"
+            "id": "33",
+            "text": "up",
+            "file_name": "33_UP"
 }, {
-    "id": "34",
-    "text": "nahoru",
-    "file_name": "34_nahoru"
+            "id": "34",
+            "text": "nahoru",
+            "file_name": "34_nahoru"
 }
     ]
 }

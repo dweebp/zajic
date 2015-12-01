@@ -269,5 +269,18 @@ p.poem {
   position: relative;
   overflow: hidden; }
 
+.socialLinks {
+  padding-top: 2em;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.33); }
+  .socialLinks.big {
+    padding: 2em; }
+    .socialLinks.big .fa {
+      font-size: 5vw; }
+  .socialLinks .fa {
+    font-size: 2em; }
+    .socialLinks .fa:nth-child(1) {
+      margin: 0 1em; }
+
 #tooltip {
   display: block; }
