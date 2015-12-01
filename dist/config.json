@@ -3,6 +3,7 @@
         "app config. everything should go here"
     ],
     "socialText": "pavel zajíc - a přece zařazuješ vyšší stupeň - nejlepší české básně 2015 #penize",
+    "socialLink": "http://penize.date",
     "tracks_folder": "audio/",
     "formats": ["mp3"],
     "tracks": [

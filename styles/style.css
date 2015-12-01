@@ -282,5 +282,13 @@ p.poem {
     .socialLinks .fa:nth-child(1) {
       margin: 0 1em; }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 #tooltip {
   display: block; }

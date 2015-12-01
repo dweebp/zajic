@@ -13,8 +13,6 @@
         offCanvas.socialLink = CONFIG.socialLink;
         offCanvas.poem = '';
 
-        console.log('mainService.getPlaylist():', mainService.getPlaylist());
-
         offCanvas.getPlaylist = function () {
             $scope.mediaPlayer.stop();
             offCanvas.playlist = [];

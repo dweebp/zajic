@@ -31,10 +31,8 @@
                     var wasNextIndex = $filter('findPieceByProperty')('isNext', true, main.pieces);
                     var wasClickedIndex = $filter('findPieceByProperty')('isClicked', true, main.pieces);
 
-                    console.log('wasNextIndex:', wasNextIndex);
-                    console.log('wasClickedIndex:', wasClickedIndex);
+
                     if (wasNextIndex) {
-                        console.log('wasNext:', main.pieces[wasNextIndex]);
                         main.pieces[wasNextIndex].isNext = false;
                     }
 
@@ -46,13 +44,11 @@
 
                     var isClickedIndex = main.pieces.indexOf(piece);
                     var isClickedId = main.pieces[isClickedIndex].id;
-                    console.log('isClickedId:', isClickedId);
                     restQueueParams();
                     main.pieces[isClickedIndex].isClicked = true;
 
                     if (isClickedId <= main.pieces.length - 1) {
                         var lookedId = parseInt(isClickedId) + 1;
-                        console.log('lookedId:', lookedId);
                         var nextId = $filter('findPieceByProperty')('id', parseInt(lookedId), main.pieces);
                         main.pieces[nextId].isNext = true;
                     }
@@ -65,7 +61,6 @@
 
         main.toggleTooltip = function () {
             main.popoverOpen = !main.popoverOpen;
-            console.log('main.popoverOpen:', main.popoverOpen);
         }
 
         $scope.$on('resetPlaylist', function () {

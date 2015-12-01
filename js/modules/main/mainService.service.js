@@ -34,7 +34,6 @@
                 if (CONFIG.tracks[i].id == 1) piece.isNext = true;
                 pieces.push(piece);
             }
-            console.log('pieces:', pieces);
 
             return pieces;
         }

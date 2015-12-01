@@ -59,7 +59,7 @@
                 <div class="copy" id="copy" ng-show="main.showInfo">
                     &copy; 2015 <a href="http://www.jansmejkal.cz" target="_blank">Jan Smejkal</a>
                 </div>
-                <div ng-repeat="piece in main.pieces " class="gridelem " ng-click="main.addToPlaylist(piece) " ng-hide="main.showInfo" ng-class="{next : piece.isNext, clicked : piece.isClicked}">
+                <div ng-repeat="piece in main.pieces " class="gridelem noselect" ng-click="main.addToPlaylist(piece) " ng-hide="main.showInfo" ng-class="{next : piece.isNext, clicked : piece.isClicked}">
                     <div class="square-content">
                         <div><span>
                                 {{piece.text}}
