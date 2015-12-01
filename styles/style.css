@@ -224,8 +224,6 @@ nav::after {
     content: "";
     display: block;
     padding-top: 100%; }
-  .gridelem:hover {
-    background-color: beige; }
   .gridelem .number {
     position: absolute;
     top: 0;

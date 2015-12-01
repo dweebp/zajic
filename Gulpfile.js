@@ -120,9 +120,12 @@ gulp.task('serve', function () {
 
 gulp.task('move-files', function () {
     gulp.src(['./config.json'])
-        .pipe(gulp.dest(dist_path))
+        .pipe(gulp.dest(dist_path));
     gulp.src(['./audio/*.*'])
         .pipe(gulp.dest(dist_path + 'audio/'));
+
+    gulp.src(['./fonts/*.*'])
+        .pipe(gulp.dest(dist_path + 'fonts/'));
 });
 
 
@@ -137,7 +140,8 @@ gulp.task('dist:js', function () {
         base_path + '/js/modules/main/mainService.service.js',
         base_path + '/js/modules/off-canvas/off-canvas.controller.js',
         base_path + '/js/modules/off-canvas/off-canvas.factory.js',
-        base_path + '/js/filters/convertToTrack.filter.js'
+        base_path + '/js/filters/convertToTrack.filter.js',
+        base_path + '/js/filters/findPieceByProperty.filter.js'
 
 
 
